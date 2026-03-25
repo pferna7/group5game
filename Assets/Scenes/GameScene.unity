@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 655481424}
   m_Layer: 6
   m_Name: Damage
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -876,6 +876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37025c6214b4e04fb1a298a86024016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::movement
+  health: 100
   moveSpeed: 5
   jumpForce: 10
   groundCheck: {fileID: 1924754980}
