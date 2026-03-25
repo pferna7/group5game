@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f551e95046cc9d4448b97a73d1e0a5d1, type: 3}
   m_Name: Red Hat
   m_EditorClassIdentifier: Assembly-CSharp::CosmeticItem
-  itemName: Hat
+  itemName: Hat - 10 coins
   slot: 0
   icon: {fileID: 21300000, guid: 8eb2ff5d15ad57044863329a435b3394, type: 3}
   worldSprite: {fileID: 21300000, guid: 8eb2ff5d15ad57044863329a435b3394, type: 3}
   price: 10
   requiredLevel: 0
   description: 
+  itemColor: {r: 1, g: 1, b: 1, a: 1}
