@@ -33,5 +33,14 @@ public class ShopItemEntry : MonoBehaviour
         }
 
         buyButton.onClick.AddListener(() => shop.OnItemBuyClicked(item));
+        
+        if (!shop.playerInventory.MeetsLevelRequirement(item))
+        {
+            GetComponent<Image>().color = new Color(0.9f, 0.5f, 0.5f, 0.6f);
+        }
+        else
+        {
+            GetComponent<Image>().color = new Color(0.5f, 0.9f, 0.5f, 0.6f);
+        }
     }
 }
