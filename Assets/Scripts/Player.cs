@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
         if (healthText != null)
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
-        rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
 
         isGrounded = Physics2D.OverlapCircle(
             groundCheck.position,
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
     {
         if (!isGrounded)
         {
-            if (rb.velocity.y > 0.1f)
+            if (rb.linearVelocity.y > 0.1f)
                 ChangeAnimation("Jump");
             else
                 ChangeAnimation("Fall");
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
             health -= 25;
             health = Mathf.Max(0, health);
 
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             StartCoroutine(BlinkRed());
 
             if (health <= 0)
