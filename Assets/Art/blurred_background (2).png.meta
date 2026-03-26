@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac6457b9556bbc14eade8074129d170d
+guid: 0f14dfdd3f4545642a4fecce67f91db0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5389373070635755810
-    second: blurred_background_0
+      213: 2333071659403769436
+    second: blurred_dark_background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blurred_background_0
+      name: blurred_dark_background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1271
-        height: 754
+        width: 1264
+        height: 739
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 229ec4de046eaca40800000000000000
-      internalID: 5389373070635755810
+      spriteID: c56fa46205cb06020800000000000000
+      internalID: 2333071659403769436
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blurred_background_0: 5389373070635755810
+      blurred_dark_background_0: 2333071659403769436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
