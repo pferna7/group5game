@@ -6,6 +6,7 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     public int health = 100;
+    public int coins = 0;
 
     public float walkSpeed = 3f;
     public float runSpeed = 6f;
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
 
     public TextMeshProUGUI healthText;
+    public TextMeshProUGUI coinText;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -43,17 +45,8 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        if (healthText != null)
-        {
-            healthText.text = "♥ " + health;
-
-            if (health <= 25)
-                healthText.color = Color.red;
-            else if (health <= 50)
-                healthText.color = Color.yellow;
-            else
-                healthText.color = Color.white;
-        }
+        UpdateHealthText();  // update the health text HUD display
+        UpdateCoinText();  // update the coin text HUD display
 
         if (moveInput > 0)
             spriteRenderer.flipX = false;
@@ -140,4 +133,32 @@ public class Player : MonoBehaviour
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
+
+
+    void UpdateHealthText() {  // update the health text at the bottom of the screen
+
+        if (healthText != null)
+        {
+            healthText.text = "♥ " + health;
+
+            if (health <= 25)
+                healthText.color = Color.red;
+            else if (health <= 50)
+                healthText.color = Color.yellow;
+            else
+                healthText.color = Color.white;
+        }
+    }
+
+
+    void UpdateCoinText() {  // update the coin text at the bottom of the screen
+
+        if (coinText != null)
+        {
+            coinText.text = "$" + coins;
+
+            coinText.color = Color.yellow;
+        }
+    }
+
 }
