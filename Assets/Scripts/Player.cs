@@ -19,6 +19,13 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI coinText;
 
+    [Header("Double Jump")]
+    public bool enableDoubleJump = true;
+
+    [Header("Damage")]
+    public int damageAmount = 25;
+    public float damageCooldown = 0.5f;
+
     private Rigidbody2D rb;
     private bool isGrounded;
     private Animator animator;
@@ -28,25 +35,47 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private string currentAnimation = "";
 
-    void Start()
+    private bool hasDoubleJumped = false;
+    private bool canTakeDamage = true;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        CheckGrounded();
+        UpdateHealthText();
+        UpdateCoinText();
     }
 
-    void Update()
+    private void Update()
     {
-        moveInput = Input.GetAxis("Horizontal");
-        isRunning = Input.GetKey(KeyCode.LeftShift);
+        CheckGrounded();
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            hasDoubleJumped = false;
         }
 
-        UpdateHealthText();  // update the health text HUD display
-        UpdateCoinText();  // update the coin text HUD display
+        moveInput = Input.GetAxisRaw("Horizontal");
+        isRunning = Input.GetKey(KeyCode.LeftShift);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded)
+            {
+                Jump();
+            }
+            else if (enableDoubleJump && !hasDoubleJumped)
+            {
+                Jump();
+                hasDoubleJumped = true;
+            }
+        }
+
+        UpdateHealthText();
+        UpdateCoinText();
 
         if (moveInput > 0)
             spriteRenderer.flipX = false;
@@ -56,10 +85,24 @@ public class Player : MonoBehaviour
         SetAnimation();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
-        rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
+        rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
+    }
+
+    private void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    }
+
+    private void CheckGrounded()
+    {
+        if (groundCheck == null)
+        {
+            isGrounded = false;
+            return;
+        }
 
         isGrounded = Physics2D.OverlapCircle(
             groundCheck.position,
@@ -68,11 +111,13 @@ public class Player : MonoBehaviour
         );
     }
 
-    void SetAnimation()
+    private void SetAnimation()
     {
+        if (animator == null) return;
+
         if (!isGrounded)
         {
-            if (rb.linearVelocity.y > 0.1f)
+            if (rb.velocity.y > 0.1f)
                 ChangeAnimation("Jump");
             else
                 ChangeAnimation("Fall");
@@ -88,44 +133,58 @@ public class Player : MonoBehaviour
             ChangeAnimation("Walking");
     }
 
-    void ChangeAnimation(string animationName)
+    private void ChangeAnimation(string animationName)
     {
+        if (animator == null) return;
         if (currentAnimation == animationName) return;
 
         animator.Play(animationName);
         currentAnimation = animationName;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Damage"))
+        if (collision.CompareTag("Damage") && canTakeDamage)
         {
-            health -= 25;
-            health = Mathf.Max(0, health);
-
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            StartCoroutine(BlinkRed());
-
-            if (health <= 0)
-            {
-                Die();
-            }
+            TakeDamage();
         }
     }
 
-    IEnumerator BlinkRed()
+    private void TakeDamage()
+    {
+        health -= damageAmount;
+        health = Mathf.Max(0, health);
+
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        StartCoroutine(BlinkRed());
+        StartCoroutine(DamageCooldownRoutine());
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private IEnumerator DamageCooldownRoutine()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageCooldown);
+        canTakeDamage = true;
+    }
+
+    private IEnumerator BlinkRed()
     {
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
     }
 
-    void Die()
+    private void Die()
     {
         SceneManager.LoadScene("GameScene");
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {
@@ -134,9 +193,8 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    void UpdateHealthText() {  // update the health text at the bottom of the screen
-
+    private void UpdateHealthText()
+    {
         if (healthText != null)
         {
             healthText.text = "♥ " + health;
@@ -150,15 +208,12 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    void UpdateCoinText() {  // update the coin text at the bottom of the screen
-
+    private void UpdateCoinText()
+    {
         if (coinText != null)
         {
             coinText.text = "$" + coins;
-
             coinText.color = Color.yellow;
         }
     }
-
 }
