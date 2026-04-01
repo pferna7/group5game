@@ -88,12 +88,12 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
-        rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
     }
 
     private void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
     private void CheckGrounded()
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 
         if (!isGrounded)
         {
-            if (rb.velocity.y > 0.1f)
+            if (rb.linearVelocity.y > 0.1f)
                 ChangeAnimation("Jump");
             else
                 ChangeAnimation("Fall");
@@ -155,7 +155,7 @@ public class Player : MonoBehaviour
         health -= damageAmount;
         health = Mathf.Max(0, health);
 
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         StartCoroutine(BlinkRed());
         StartCoroutine(DamageCooldownRoutine());
 
