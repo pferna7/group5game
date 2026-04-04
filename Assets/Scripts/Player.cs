@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // When the player dies, reload the current scene
     }
 
     void OnDrawGizmosSelected()
