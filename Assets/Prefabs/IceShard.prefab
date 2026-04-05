@@ -152,4 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceShard
   fallSpeed: 5
-  damage: 25
+  damage: 10
