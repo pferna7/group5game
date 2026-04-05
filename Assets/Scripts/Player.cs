@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private string currentAnimation = "";
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,14 +59,18 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
-        rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
+
+        
 
         isGrounded = Physics2D.OverlapCircle(
             groundCheck.position,
             groundCheckRadius,
             groundLayer
         );
+
+        rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
     }
 
     void SetAnimation()
