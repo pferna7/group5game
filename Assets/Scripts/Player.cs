@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator BlinkRed()
+    public IEnumerator BlinkRed()
     {
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);

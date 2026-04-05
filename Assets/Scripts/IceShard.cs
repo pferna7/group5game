@@ -5,6 +5,7 @@ public class IceShard : MonoBehaviour
 {
     [SerializeField] private float fallSpeed = 5f;
     [SerializeField] private int damage = 50;
+    private SpriteRenderer spriteRenderer;
 
     void Update()
     {
@@ -18,6 +19,9 @@ public class IceShard : MonoBehaviour
             Player player = other.GetComponent<Player>();
             if (player != null)
             {
+
+
+                player.StartCoroutine(player.BlinkRed());
                 player.health -= damage;
                 player.health = Mathf.Max(0, player.health);
                 if (player.health <= 0)
@@ -33,4 +37,5 @@ public class IceShard : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
