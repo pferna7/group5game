@@ -28,12 +28,21 @@ public class Player : MonoBehaviour
     private bool isRunning;
     private string currentAnimation = "";
 
+    public bool speedBoost;
+    public float speedBoostMultiplier = 2f;
+    public float speedBoostDuration = 5f;
+
+    public bool hasDoubleJumpPwrUP = false;   // starts OFF
+    private int extraJumps;
+    public int extraJumpsValue = 1;             // 1 extra jump = double jump
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        extraJumps = 0; // no double jump at start
     }
 
     void Update()
@@ -41,13 +50,21 @@ public class Player : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         isRunning = Input.GetKey(KeyCode.LeftShift);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            if (isGrounded)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            }
+            else if (hasDoubleJumpPwrUP && extraJumps > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                extraJumps--;
+            }
         }
 
-        UpdateHealthText();  // update the health text HUD display
-        UpdateCoinText();  // update the coin text HUD display
+        UpdateHealthText();
+        UpdateCoinText();
 
         if (moveInput > 0)
             spriteRenderer.flipX = false;
@@ -59,16 +76,23 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
-
-        
+        if (speedBoost) currentSpeed *= speedBoostMultiplier;
 
         isGrounded = Physics2D.OverlapCircle(
             groundCheck.position,
             groundCheckRadius,
             groundLayer
         );
+
+        // reset jumps only if player has unlocked the powerup
+        if (isGrounded)
+        {
+            if (hasDoubleJumpPwrUP)
+                extraJumps = extraJumpsValue;
+            else
+                extraJumps = 0;
+        }
 
         rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
     }
@@ -118,6 +142,40 @@ public class Player : MonoBehaviour
         }
     }
 
+  private void OnTriggerEnter2D(Collider2D collision)
+{
+    Debug.Log("Touched trigger: " + collision.gameObject.name + " | Tag: " + collision.gameObject.tag);
+
+    if (collision.CompareTag("SpeedBoostPwrUP"))
+    {
+        Destroy(collision.gameObject);
+        StartCoroutine(SpeedBoostCoroutine());
+    }
+
+    if (collision.CompareTag("DoubleJumpPwrUP"))
+    {
+        Destroy(collision.gameObject);
+        StartCoroutine(DoubleJumpCoroutine());
+    }
+}
+
+IEnumerator DoubleJumpCoroutine()
+{
+    hasDoubleJumpPwrUP = true; 
+    extraJumps = extraJumpsValue;
+
+    yield return new WaitForSeconds(7f);
+
+    hasDoubleJumpPwrUP = false;
+    extraJumps = 0;
+}
+    IEnumerator SpeedBoostCoroutine()
+    {
+        speedBoost = true;
+        yield return new WaitForSeconds(speedBoostDuration);
+        speedBoost = false;
+    }
+
     IEnumerator BlinkRed()
     {
         spriteRenderer.color = Color.red;
@@ -127,7 +185,7 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // When the player dies, reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void OnDrawGizmosSelected()
@@ -139,9 +197,8 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    void UpdateHealthText() {  // update the health text at the bottom of the screen
-
+    void UpdateHealthText()
+    {
         if (healthText != null)
         {
             healthText.text = "♥ " + health;
@@ -155,15 +212,12 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    void UpdateCoinText() {  // update the coin text at the bottom of the screen
-
+    void UpdateCoinText()
+    {
         if (coinText != null)
         {
             coinText.text = "$" + coins;
-
             coinText.color = Color.yellow;
         }
     }
-
 }
