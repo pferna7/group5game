@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI coinText;
 
     [Header("Double Jump")]
-    public bool enableDoubleJump = true;
+    public bool enableDoubleJump = false;
+    public ShowDoubleJumpMessage doubleJumpMessage;
 
     [Header("Damage")]
     public int damageAmount = 25;
@@ -182,6 +183,22 @@ public class Player : MonoBehaviour
     private void Die()
     {
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void UnlockDoubleJump()
+    {
+        if (enableDoubleJump)
+            return;
+
+        enableDoubleJump = true;
+        hasDoubleJumped = false;
+
+        if (doubleJumpMessage != null)
+        {
+            doubleJumpMessage.ShowMessageNow();
+        }
+
+        Debug.Log("Double jump unlocked!");
     }
 
     private void OnDrawGizmosSelected()
