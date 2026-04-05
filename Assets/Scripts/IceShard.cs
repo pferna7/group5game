@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IceShard : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class IceShard : MonoBehaviour
                 player.health = Mathf.Max(0, player.health);
                 if (player.health <= 0)
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // When the player dies, reload the current scene
                 }
             }
             Destroy(gameObject);
