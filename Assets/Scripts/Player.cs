@@ -39,28 +39,25 @@ public class Player : MonoBehaviour
     private bool hasDoubleJumped = false;
     private bool canTakeDamage = true;
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        CheckGrounded();
         UpdateHealthText();
         UpdateCoinText();
     }
 
-    private void Update()
+    void Update()
     {
-        CheckGrounded();
+        moveInput = Input.GetAxisRaw("Horizontal");
+        isRunning = Input.GetKey(KeyCode.LeftShift);
 
         if (isGrounded)
         {
             hasDoubleJumped = false;
         }
-
-        moveInput = Input.GetAxisRaw("Horizontal");
-        isRunning = Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -78,6 +75,7 @@ public class Player : MonoBehaviour
         UpdateHealthText();
         UpdateCoinText();
 
+        // Flip sprite
         if (moveInput > 0)
             spriteRenderer.flipX = false;
         else if (moveInput < 0)
@@ -86,18 +84,20 @@ public class Player : MonoBehaviour
         SetAnimation();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        CheckGrounded();
+
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
         rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
     }
 
-    private void Jump()
+    void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
-    private void CheckGrounded()
+    void CheckGrounded()
     {
         if (groundCheck == null)
         {
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
         );
     }
 
-    private void SetAnimation()
+    void SetAnimation()
     {
         if (animator == null) return;
 
@@ -122,11 +122,12 @@ public class Player : MonoBehaviour
                 ChangeAnimation("Jump");
             else
                 ChangeAnimation("Fall");
-
             return;
         }
 
-        if (Mathf.Abs(moveInput) < 0.1f)
+        float xSpeed = Mathf.Abs(rb.linearVelocity.x);
+
+        if (xSpeed < 0.1f)
             ChangeAnimation("Idle");
         else if (isRunning)
             ChangeAnimation("Run");
@@ -134,7 +135,7 @@ public class Player : MonoBehaviour
             ChangeAnimation("Walking");
     }
 
-    private void ChangeAnimation(string animationName)
+    void ChangeAnimation(string animationName)
     {
         if (animator == null) return;
         if (currentAnimation == animationName) return;
@@ -143,20 +144,22 @@ public class Player : MonoBehaviour
         currentAnimation = animationName;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    // ✅ FIXED DAMAGE SYSTEM (collision-based)
+    void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.CompareTag("Damage") && canTakeDamage)
+        if (collision.gameObject.CompareTag("Damage") && canTakeDamage)
         {
             TakeDamage();
         }
     }
 
-    private void TakeDamage()
+    void TakeDamage()
     {
         health -= damageAmount;
         health = Mathf.Max(0, health);
 
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
         StartCoroutine(BlinkRed());
         StartCoroutine(DamageCooldownRoutine());
 
@@ -166,29 +169,28 @@ public class Player : MonoBehaviour
         }
     }
 
-    private IEnumerator DamageCooldownRoutine()
+    IEnumerator DamageCooldownRoutine()
     {
         canTakeDamage = false;
         yield return new WaitForSeconds(damageCooldown);
         canTakeDamage = true;
     }
 
-    private IEnumerator BlinkRed()
+    IEnumerator BlinkRed()
     {
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
     }
 
-    private void Die()
+    void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // When the player dies, reload the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void UnlockDoubleJump()
     {
-        if (enableDoubleJump)
-            return;
+        if (enableDoubleJump) return;
 
         enableDoubleJump = true;
         hasDoubleJumped = false;
@@ -201,7 +203,7 @@ public class Player : MonoBehaviour
         Debug.Log("Double jump unlocked!");
     }
 
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {
@@ -210,7 +212,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void UpdateHealthText()
+    void UpdateHealthText()
     {
         if (healthText != null)
         {
@@ -225,12 +227,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void UpdateCoinText()
+    void UpdateCoinText()
     {
         if (coinText != null)
         {
             coinText.text = "$" + coins;
             coinText.color = Color.yellow;
         }
+    }
+
+    // optional cleaner coin method
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        UpdateCoinText();
     }
 }
