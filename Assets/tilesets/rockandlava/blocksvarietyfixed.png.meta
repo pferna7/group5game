@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: cf96c16e73f940d4eb090afae9326bbd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 630788589524316489
+    second: blocksvarietyfixed_0
+  - first:
+      213: -7767685564743304240
+    second: blocksvarietyfixed_1
+  - first:
+      213: 2123437365660786320
+    second: blocksvarietyfixed_2
+  - first:
+      213: 7599928839827050328
+    second: blocksvarietyfixed_3
+  - first:
+      213: 7980449162250808140
+    second: blocksvarietyfixed_4
+  - first:
+      213: -6405569987012273537
+    second: blocksvarietyfixed_5
+  - first:
+      213: -9003895446590950662
+    second: blocksvarietyfixed_6
+  - first:
+      213: 4141857519010072889
+    second: blocksvarietyfixed_7
+  - first:
+      213: 6046257562884583778
+    second: blocksvarietyfixed_8
+  - first:
+      213: 1522349464566410272
+    second: blocksvarietyfixed_9
+  - first:
+      213: -2617563620362255920
+    second: blocksvarietyfixed_10
+  - first:
+      213: -3742125064568353629
+    second: blocksvarietyfixed_11
+  - first:
+      213: 8503502358885614026
+    second: blocksvarietyfixed_12
+  - first:
+      213: -4959078749266195835
+    second: blocksvarietyfixed_13
+  - first:
+      213: 3480800719952671483
+    second: blocksvarietyfixed_14
+  - first:
+      213: -982015756824267129
+    second: blocksvarietyfixed_15
+  - first:
+      213: 6292674502032297247
+    second: blocksvarietyfixed_16
+  - first:
+      213: -6194982618068674851
+    second: blocksvarietyfixed_17
+  - first:
+      213: -7115549999357862365
+    second: blocksvarietyfixed_18
+  - first:
+      213: 4364622771083294509
+    second: blocksvarietyfixed_19
+  - first:
+      213: -7385484766129047771
+    second: blocksvarietyfixed_20
+  - first:
+      213: 3574844825376094603
+    second: blocksvarietyfixed_21
+  - first:
+      213: -953606191960168018
+    second: blocksvarietyfixed_22
+  - first:
+      213: 8041978817115512026
+    second: blocksvarietyfixed_23
+  - first:
+      213: 1332479786470500999
+    second: blocksvarietyfixed_24
+  - first:
+      213: -6330059985060068978
+    second: blocksvarietyfixed_25
+  - first:
+      213: 8864465118398186789
+    second: blocksvarietyfixed_26
+  - first:
+      213: 8526318458070483625
+    second: blocksvarietyfixed_27
+  - first:
+      213: 5001808999048043087
+    second: blocksvarietyfixed_28
+  - first:
+      213: -8268327709190916618
+    second: blocksvarietyfixed_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blocksvarietyfixed_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1313
+        width: 155
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94177fe41e201c800800000000000000
+      internalID: 630788589524316489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1312
+        width: 154
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dbbb824223a33490800000000000000
+      internalID: -7767685564743304240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_2
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1311
+        width: 154
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e900b9807f77d10800000000000000
+      internalID: 2123437365660786320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_3
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1315
+        width: 153
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f4320830f587960800000000000000
+      internalID: 7599928839827050328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_4
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1317
+        width: 154
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4be5081b3040ce60800000000000000
+      internalID: 7980449162250808140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1130
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ada34f808da17a0800000000000000
+      internalID: -6405569987012273537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_6
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1129
+        width: 155
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af27037cbccbb0380800000000000000
+      internalID: -9003895446590950662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_7
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93940e21875da7930800000000000000
+      internalID: 4141857519010072889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_8
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1131
+        width: 150
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2613140183f98e350800000000000000
+      internalID: 6046257562884583778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_9
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1131
+        width: 152
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cac73b5c8702510800000000000000
+      internalID: 1522349464566410272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_10
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 947
+        width: 158
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1825771cb8cabd0800000000000000
+      internalID: -2617563620362255920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_11
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 946
+        width: 158
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac4155941d411cc0800000000000000
+      internalID: -3742125064568353629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 950
+        width: 150
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1c2188752820670800000000000000
+      internalID: 8503502358885614026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_13
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 955
+        width: 153
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58accc0e620dd2bb0800000000000000
+      internalID: -4959078749266195835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_14
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 948
+        width: 152
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2f3be00d94e4030800000000000000
+      internalID: 3480800719952671483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_15
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 767
+        width: 158
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78637a24fdd2f52f0800000000000000
+      internalID: -982015756824267129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_16
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 771
+        width: 152
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d0bcc9e12145750800000000000000
+      internalID: 6292674502032297247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_17
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 769
+        width: 157
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd61c4c9120070aa0800000000000000
+      internalID: -6194982618068674851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_18
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 768
+        width: 152
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e5eb2b9fc704d90800000000000000
+      internalID: -7115549999357862365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_19
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 773
+        width: 150
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2730091941429c30800000000000000
+      internalID: 4364622771083294509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_20
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 587
+        width: 153
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527b1d43cbc718990800000000000000
+      internalID: -7385484766129047771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_21
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 587
+        width: 157
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b897fa7ad666c9130800000000000000
+      internalID: 3574844825376094603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_22
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 587
+        width: 157
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9e998883c14c2f0800000000000000
+      internalID: -953606191960168018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_23
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 587
+        width: 153
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adcd26d3029da9f60800000000000000
+      internalID: 8041978817115512026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_24
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 589
+        width: 151
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78a66f65e4bed7210800000000000000
+      internalID: 1332479786470500999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_25
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 407
+        width: 149
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81849f4bfb1728a0800000000000000
+      internalID: -6330059985060068978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_26
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 407
+        width: 152
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52507f92f08e40b70800000000000000
+      internalID: 8864465118398186789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_27
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 405
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2c5279671935670800000000000000
+      internalID: 8526318458070483625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_28
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 405
+        width: 153
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a5c9ea8cef96540800000000000000
+      internalID: 5001808999048043087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blocksvarietyfixed_29
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 226
+        width: 149
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5f72781cff04d80800000000000000
+      internalID: -8268327709190916618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blocksvarietyfixed_0: 630788589524316489
+      blocksvarietyfixed_1: -7767685564743304240
+      blocksvarietyfixed_10: -2617563620362255920
+      blocksvarietyfixed_11: -3742125064568353629
+      blocksvarietyfixed_12: 8503502358885614026
+      blocksvarietyfixed_13: -4959078749266195835
+      blocksvarietyfixed_14: 3480800719952671483
+      blocksvarietyfixed_15: -982015756824267129
+      blocksvarietyfixed_16: 6292674502032297247
+      blocksvarietyfixed_17: -6194982618068674851
+      blocksvarietyfixed_18: -7115549999357862365
+      blocksvarietyfixed_19: 4364622771083294509
+      blocksvarietyfixed_2: 2123437365660786320
+      blocksvarietyfixed_20: -7385484766129047771
+      blocksvarietyfixed_21: 3574844825376094603
+      blocksvarietyfixed_22: -953606191960168018
+      blocksvarietyfixed_23: 8041978817115512026
+      blocksvarietyfixed_24: 1332479786470500999
+      blocksvarietyfixed_25: -6330059985060068978
+      blocksvarietyfixed_26: 8864465118398186789
+      blocksvarietyfixed_27: 8526318458070483625
+      blocksvarietyfixed_28: 5001808999048043087
+      blocksvarietyfixed_29: -8268327709190916618
+      blocksvarietyfixed_3: 7599928839827050328
+      blocksvarietyfixed_4: 7980449162250808140
+      blocksvarietyfixed_5: -6405569987012273537
+      blocksvarietyfixed_6: -9003895446590950662
+      blocksvarietyfixed_7: 4141857519010072889
+      blocksvarietyfixed_8: 6046257562884583778
+      blocksvarietyfixed_9: 1522349464566410272
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
