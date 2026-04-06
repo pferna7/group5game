@@ -2160,7 +2160,7 @@ GameObject:
   - component: {fileID: 908043359}
   - component: {fileID: 908043358}
   - component: {fileID: 908043361}
-  - component: {fileID: 908043360}
+  - component: {fileID: 908043362}
   m_Layer: 0
   m_Name: player-idle1
   m_TagString: Player
@@ -2242,18 +2242,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &908043360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908043357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d5ec799d82d724589c52419461258c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShopTrigger
 --- !u!61 &908043361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2300,6 +2288,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.38}
   m_EdgeRadius: 0
+--- !u!114 &908043362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908043357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6d9ef640e21dc4a8b0d3dffc268759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleport2Shiven
 --- !u!1 &956072403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,6 +4674,7 @@ MonoBehaviour:
   walkSpeed: 3
   runSpeed: 6
   jumpForce: 10
+  bouncePadMultiplier: 2
   groundCheck: {fileID: 1924754980}
   groundCheckRadius: 0.1
   groundLayer:
