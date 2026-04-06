@@ -241,20 +241,14 @@ public class Player : MonoBehaviour
         StartCoroutine(BlinkRed());
         StartCoroutine(DamageCooldownRoutine());
 
-        if (health <= 0)
-        {
-            Die();
+            if (health <= 0)
+            {
+                Die();
+            }
         }
-    }
 
-    IEnumerator DamageCooldownRoutine()
-    {
-        canTakeDamage = false;
-        yield return new WaitForSeconds(damageCooldown);
-        canTakeDamage = true;
-    }
 
-    IEnumerator DoubleJumpCoroutine()
+    public IEnumerator DoubleJumpCoroutine()
     {
         doubleJumpPowerupActive = true;
         hasDoubleJumped = false;
@@ -271,7 +265,7 @@ public class Player : MonoBehaviour
         speedBoost = false;
     }
 
-    IEnumerator BlinkRed()
+    public IEnumerator BlinkRed()
     {
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
