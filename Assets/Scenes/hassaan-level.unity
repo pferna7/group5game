@@ -11375,6 +11375,7 @@ GameObject:
   - component: {fileID: 908043358}
   - component: {fileID: 908043361}
   - component: {fileID: 908043360}
+  - component: {fileID: 908043362}
   m_Layer: 0
   m_Name: player-idle1
   m_TagString: Player
@@ -11463,7 +11464,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908043357}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50d5ec799d82d724589c52419461258c, type: 3}
   m_Name: 
@@ -11514,6 +11515,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.38}
   m_EdgeRadius: 0
+--- !u!114 &908043362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908043357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc71fabe4b1e26345a455e8c751da659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActualShopTrigger
 --- !u!1 &935781483
 GameObject:
   m_ObjectHideFlags: 0
@@ -14223,6 +14236,7 @@ MonoBehaviour:
   walkSpeed: 3
   runSpeed: 6
   jumpForce: 10
+  bouncePadMultiplier: 2
   groundCheck: {fileID: 1179920940}
   groundCheckRadius: 0.2
   groundLayer:
@@ -14230,6 +14244,14 @@ MonoBehaviour:
     m_Bits: 64
   healthText: {fileID: 1401016467}
   coinText: {fileID: 1679775126}
+  enableDoubleJump: 0
+  doubleJumpPowerupDuration: 7
+  doubleJumpMessage: {fileID: 0}
+  speedBoost: 0
+  speedBoostMultiplier: 2
+  speedBoostDuration: 5
+  damageAmount: 25
+  damageCooldown: 0.5
 --- !u!61 &1882095867
 BoxCollider2D:
   m_ObjectHideFlags: 0
