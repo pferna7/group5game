@@ -182,7 +182,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);  // When the player dies, reload the current scene
     }
 
     public void UnlockDoubleJump()
