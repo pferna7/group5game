@@ -143,9 +143,9 @@ public class Player : MonoBehaviour
         currentAnimation = animationName;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.CompareTag("Damage") && canTakeDamage)
+        if (collision.collider.CompareTag("Damage") && canTakeDamage)
         {
             TakeDamage();
         }
