@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float walkSpeed = 3f;
     public float runSpeed = 6f;
     public float jumpForce = 10f;
+    public float bouncePadMultiplier = 2f;
 
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
@@ -75,7 +76,6 @@ public class Player : MonoBehaviour
         UpdateHealthText();
         UpdateCoinText();
 
-        // Flip sprite
         if (moveInput > 0)
             spriteRenderer.flipX = false;
         else if (moveInput < 0)
@@ -144,13 +144,62 @@ public class Player : MonoBehaviour
         currentAnimation = animationName;
     }
 
-void OnTriggerStay2D(Collider2D collision)
-{
-    if (collision.CompareTag("Damage") && canTakeDamage)
+    void OnTriggerStay2D(Collider2D collision)
     {
-        TakeDamage();
+        HandleHazardTrigger(collision);
     }
-}
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        HandleHazardCollision(collision);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        HandleBounceTrigger(collision);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        HandleBounceCollision(collision);
+    }
+
+    void HandleHazardTrigger(Collider2D collision)
+    {
+        if (collision.CompareTag("Damage") && canTakeDamage)
+        {
+            TakeDamage();
+        }
+    }
+
+    void HandleHazardCollision(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Damage") && canTakeDamage)
+        {
+            TakeDamage();
+        }
+    }
+
+    void HandleBounceTrigger(Collider2D collision)
+    {
+        if (collision.CompareTag("BouncePad"))
+        {
+            Bounce();
+        }
+    }
+
+    void HandleBounceCollision(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("BouncePad"))
+        {
+            Bounce();
+        }
+    }
+
+    void Bounce()
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * bouncePadMultiplier);
+    }
 
     void TakeDamage()
     {
@@ -165,10 +214,6 @@ void OnTriggerStay2D(Collider2D collision)
         if (health <= 0)
         {
             Die();
-        }
-        else if (collision.gameObject.tag == "BouncePad")
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2);
         }
     }
 
@@ -239,7 +284,6 @@ void OnTriggerStay2D(Collider2D collision)
         }
     }
 
-    // optional cleaner coin method
     public void AddCoins(int amount)
     {
         coins += amount;
