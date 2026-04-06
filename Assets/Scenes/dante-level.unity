@@ -10047,7 +10047,7 @@ GameObject:
   - component: {fileID: 908043359}
   - component: {fileID: 908043358}
   - component: {fileID: 908043361}
-  - component: {fileID: 908043360}
+  - component: {fileID: 908043362}
   m_Layer: 0
   m_Name: player-idle1
   m_TagString: Player
@@ -10129,18 +10129,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &908043360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 908043357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d5ec799d82d724589c52419461258c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShopTrigger
 --- !u!61 &908043361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10187,6 +10175,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32, y: 0.38}
   m_EdgeRadius: 0
+--- !u!114 &908043362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908043357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74da576ccc2bcd642a540f9d5d8e9d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Teleport2Nileshan
 --- !u!1001 &911646644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10909,6 +10909,10 @@ MonoBehaviour:
     m_Bits: 64
   healthText: {fileID: 1401016467}
   coinText: {fileID: 1024694583}
+  enableDoubleJump: 0
+  doubleJumpMessage: {fileID: 0}
+  damageAmount: 25
+  damageCooldown: 0.5
 --- !u!95 &1278955139
 Animator:
   serializedVersion: 7
