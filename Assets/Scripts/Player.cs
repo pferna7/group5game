@@ -144,14 +144,13 @@ public class Player : MonoBehaviour
         currentAnimation = animationName;
     }
 
-    // ✅ FIXED DAMAGE SYSTEM (collision-based)
-    void OnCollisionStay2D(Collision2D collision)
+void OnTriggerStay2D(Collider2D collision)
+{
+    if (collision.CompareTag("Damage") && canTakeDamage)
     {
-        if (collision.gameObject.CompareTag("Damage") && canTakeDamage)
-        {
-            TakeDamage();
-        }
+        TakeDamage();
     }
+}
 
     void TakeDamage()
     {
