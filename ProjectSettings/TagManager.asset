@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Damage
+  - DialogueBox
+  - DialogueText
+  - SpeedBoostPwrUP
+  - DoubleJumpPwrUP
   - BouncePad
   - DialogueText
   - DialogueBox
