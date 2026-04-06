@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Damage
-  - DialogueBox
+  - BouncePad
   - DialogueText
+  - DialogueBox
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 819209327
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
