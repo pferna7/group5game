@@ -247,6 +247,12 @@ public class Player : MonoBehaviour
             }
         }
 
+    IEnumerator DamageCooldownRoutine()
+    {
+        canTakeDamage = false;
+        yield return new WaitForSeconds(damageCooldown);
+        canTakeDamage = true;
+    }
 
     public IEnumerator DoubleJumpCoroutine()
     {
