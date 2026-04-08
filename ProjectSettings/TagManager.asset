@@ -21,7 +21,7 @@ TagManager:
   - UI
   - Ground
   - 
-  - 
+  - background
   - 
   - 
   - 
@@ -54,3 +54,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - background
