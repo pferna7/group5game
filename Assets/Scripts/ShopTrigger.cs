@@ -11,6 +11,14 @@ public class ShopTrigger : MonoBehaviour
         if (other.CompareTag("Player") && !triggered)
         {
             triggered = true;
+
+            Player player = other.GetComponent<Player>();
+
+            if (player != null)
+            {
+                player.AddCoins(100);  // cleaner method
+            }
+
             StartCoroutine(LoadShop());
         }
     }
@@ -18,7 +26,7 @@ public class ShopTrigger : MonoBehaviour
     private IEnumerator LoadShop()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("ShopScene");
+        SceneManager.LoadScene("dante-level");
     }
 
     private void OnGUI()

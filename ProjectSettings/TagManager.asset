@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Damage
+  - DialogueBox
+  - DialogueText
+  - SpeedBoostPwrUP
+  - DoubleJumpPwrUP
+  - BouncePad
+  - DialogueText
+  - DialogueBox
   layers:
   - Default
   - TransparentFX
@@ -14,7 +21,7 @@ TagManager:
   - UI
   - Ground
   - 
-  - 
+  - background
   - 
   - 
   - 
@@ -40,6 +47,9 @@ TagManager:
   - 
   m_SortingLayers:
   - name: background
+    uniqueID: 819209327
+    locked: 0
+  - name: background
     uniqueID: 1780983183
     locked: 0
   - name: Default
@@ -47,3 +57,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  - background

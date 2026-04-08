@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float walkSpeed = 3f;
     public float runSpeed = 6f;
     public float jumpForce = 10f;
+    public float bouncePadMultiplier = 2f;
 
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
@@ -20,8 +21,14 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI coinText;
 
     [Header("Double Jump")]
-    public bool enableDoubleJump = false;
+    public bool enableDoubleJump = false; // permanent unlock if needed
+    public float doubleJumpPowerupDuration = 7f;
     public ShowDoubleJumpMessage doubleJumpMessage;
+
+    [Header("Speed Boost")]
+    public bool speedBoost = false;
+    public float speedBoostMultiplier = 2f;
+    public float speedBoostDuration = 5f;
 
     [Header("Damage")]
     public int damageAmount = 25;
@@ -38,29 +45,27 @@ public class Player : MonoBehaviour
 
     private bool hasDoubleJumped = false;
     private bool canTakeDamage = true;
+    private bool doubleJumpPowerupActive = false;
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
 
-        CheckGrounded();
         UpdateHealthText();
         UpdateCoinText();
     }
 
-    private void Update()
+    void Update()
     {
-        CheckGrounded();
+        moveInput = Input.GetAxisRaw("Horizontal");
+        isRunning = Input.GetKey(KeyCode.LeftShift);
 
         if (isGrounded)
         {
             hasDoubleJumped = false;
         }
-
-        moveInput = Input.GetAxisRaw("Horizontal");
-        isRunning = Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -68,7 +73,7 @@ public class Player : MonoBehaviour
             {
                 Jump();
             }
-            else if (enableDoubleJump && !hasDoubleJumped)
+            else if (CanUseDoubleJump() && !hasDoubleJumped)
             {
                 Jump();
                 hasDoubleJumped = true;
@@ -86,18 +91,29 @@ public class Player : MonoBehaviour
         SetAnimation();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        CheckGrounded();
+
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
+
+        if (speedBoost)
+            currentSpeed *= speedBoostMultiplier;
+
         rb.linearVelocity = new Vector2(moveInput * currentSpeed, rb.linearVelocity.y);
     }
 
-    private void Jump()
+    bool CanUseDoubleJump()
+    {
+        return enableDoubleJump || doubleJumpPowerupActive;
+    }
+
+    void Jump()
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
-    private void CheckGrounded()
+    void CheckGrounded()
     {
         if (groundCheck == null)
         {
@@ -112,7 +128,7 @@ public class Player : MonoBehaviour
         );
     }
 
-    private void SetAnimation()
+    void SetAnimation()
     {
         if (animator == null) return;
 
@@ -122,11 +138,12 @@ public class Player : MonoBehaviour
                 ChangeAnimation("Jump");
             else
                 ChangeAnimation("Fall");
-
             return;
         }
 
-        if (Mathf.Abs(moveInput) < 0.1f)
+        float xSpeed = Mathf.Abs(rb.linearVelocity.x);
+
+        if (xSpeed < 0.1f)
             ChangeAnimation("Idle");
         else if (isRunning)
             ChangeAnimation("Run");
@@ -134,7 +151,7 @@ public class Player : MonoBehaviour
             ChangeAnimation("Walking");
     }
 
-    private void ChangeAnimation(string animationName)
+    void ChangeAnimation(string animationName)
     {
         if (animator == null) return;
         if (currentAnimation == animationName) return;
@@ -143,52 +160,132 @@ public class Player : MonoBehaviour
         currentAnimation = animationName;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("Damage") && canTakeDamage)
+        HandleHazardTrigger(collision);
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        HandleHazardCollision(collision);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Touched trigger: " + collision.gameObject.name + " | Tag: " + collision.gameObject.tag);
+
+        HandleBounceTrigger(collision);
+
+        if (collision.CompareTag("SpeedBoostPwrUP"))
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine(SpeedBoostCoroutine());
+        }
+
+        if (collision.CompareTag("DoubleJumpPwrUP"))
+        {
+            Destroy(collision.gameObject);
+            StartCoroutine(DoubleJumpCoroutine());
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        HandleBounceCollision(collision);
+    }
+
+    void HandleHazardTrigger(Collider2D collision)
+    {
+        if (collision.CompareTag("Damage") && canTakeDamage)
         {
             TakeDamage();
         }
     }
 
-    private void TakeDamage()
+    void HandleHazardCollision(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Damage") && canTakeDamage)
+        {
+            TakeDamage();
+        }
+    }
+
+    void HandleBounceTrigger(Collider2D collision)
+    {
+        if (collision.CompareTag("BouncePad"))
+        {
+            Bounce();
+        }
+    }
+
+    void HandleBounceCollision(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("BouncePad"))
+        {
+            Bounce();
+        }
+    }
+
+    void Bounce()
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * bouncePadMultiplier);
+    }
+
+    void TakeDamage()
     {
         health -= damageAmount;
         health = Mathf.Max(0, health);
 
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
         StartCoroutine(BlinkRed());
         StartCoroutine(DamageCooldownRoutine());
 
-        if (health <= 0)
-        {
-            Die();
+            if (health <= 0)
+            {
+                Die();
+            }
         }
-    }
 
-    private IEnumerator DamageCooldownRoutine()
+    IEnumerator DamageCooldownRoutine()
     {
         canTakeDamage = false;
         yield return new WaitForSeconds(damageCooldown);
         canTakeDamage = true;
     }
 
-    private IEnumerator BlinkRed()
+    public IEnumerator DoubleJumpCoroutine()
+    {
+        doubleJumpPowerupActive = true;
+        hasDoubleJumped = false;
+
+        yield return new WaitForSeconds(doubleJumpPowerupDuration);
+
+        doubleJumpPowerupActive = false;
+    }
+
+    IEnumerator SpeedBoostCoroutine()
+    {
+        speedBoost = true;
+        yield return new WaitForSeconds(speedBoostDuration);
+        speedBoost = false;
+    }
+
+    public IEnumerator BlinkRed()
     {
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
     }
 
-    private void Die()
+    void Die()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void UnlockDoubleJump()
     {
-        if (enableDoubleJump)
-            return;
+        if (enableDoubleJump) return;
 
         enableDoubleJump = true;
         hasDoubleJumped = false;
@@ -201,7 +298,7 @@ public class Player : MonoBehaviour
         Debug.Log("Double jump unlocked!");
     }
 
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {
@@ -210,7 +307,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void UpdateHealthText()
+    void UpdateHealthText()
     {
         if (healthText != null)
         {
@@ -225,12 +322,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void UpdateCoinText()
+    void UpdateCoinText()
     {
         if (coinText != null)
         {
             coinText.text = "$" + coins;
             coinText.color = Color.yellow;
         }
+    }
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        UpdateCoinText();
     }
 }

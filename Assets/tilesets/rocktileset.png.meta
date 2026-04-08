@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: d8d0ffa6402dc2344bfbd11c958f6f1a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 629654483093268177
+    second: rocktileset_0
+  - first:
+      213: -2634430325167498645
+    second: rocktileset_1
+  - first:
+      213: -3144032757131800300
+    second: rocktileset_2
+  - first:
+      213: 1216410463464138623
+    second: rocktileset_3
+  - first:
+      213: 8433848331941734647
+    second: rocktileset_4
+  - first:
+      213: -1333476231619169253
+    second: rocktileset_5
+  - first:
+      213: 2606319326599323276
+    second: rocktileset_6
+  - first:
+      213: -476031679131937525
+    second: rocktileset_7
+  - first:
+      213: 2558016576018905481
+    second: rocktileset_8
+  - first:
+      213: -5717223087083922936
+    second: rocktileset_9
+  - first:
+      213: 5375054016984218824
+    second: rocktileset_10
+  - first:
+      213: 742464164070439137
+    second: rocktileset_11
+  - first:
+      213: -1912432039690939043
+    second: rocktileset_12
+  - first:
+      213: -7872256569959685090
+    second: rocktileset_13
+  - first:
+      213: -9170119593506529693
+    second: rocktileset_14
+  - first:
+      213: -4702437769008919826
+    second: rocktileset_15
+  - first:
+      213: -8117209070200576498
+    second: rocktileset_16
+  - first:
+      213: 356439779121337402
+    second: rocktileset_17
+  - first:
+      213: 4138136268872790178
+    second: rocktileset_18
+  - first:
+      213: 2640112931373771479
+    second: rocktileset_19
+  - first:
+      213: 2013772235954794865
+    second: rocktileset_20
+  - first:
+      213: -648244370937874045
+    second: rocktileset_21
+  - first:
+      213: -8442593990336723119
+    second: rocktileset_22
+  - first:
+      213: 9219921665803095873
+    second: rocktileset_23
+  - first:
+      213: -1180801119639906029
+    second: rocktileset_24
+  - first:
+      213: 6899267802901248853
+    second: rocktileset_25
+  - first:
+      213: -4483466010852463401
+    second: rocktileset_26
+  - first:
+      213: -5883884749247802999
+    second: rocktileset_27
+  - first:
+      213: 964236246387065259
+    second: rocktileset_28
+  - first:
+      213: -6966354165933233921
+    second: rocktileset_29
+  - first:
+      213: -866779507777016397
+    second: rocktileset_30
+  - first:
+      213: 2385958125175560655
+    second: rocktileset_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rocktileset_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6a1049a6bfcb800800000000000000
+      internalID: 629654483093268177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6adfdab39f907bd0800000000000000
+      internalID: -2634430325167498645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41197fc7dd62e54d0800000000000000
+      internalID: -3144032757131800300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7729d72fde81e010800000000000000
+      internalID: 1216410463464138623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_4
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f868ea9f5c0b0570800000000000000
+      internalID: 8433848331941734647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_5
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14b9e1be6a8e7de0800000000000000
+      internalID: -1333476231619169253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_6
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e10316e918b2420800000000000000
+      internalID: 2606319326599323276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_7
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 447
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b05128fb5bbc469f0800000000000000
+      internalID: -476031679131937525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989fa2fd586ef7320800000000000000
+      internalID: 2558016576018905481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_9
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a53b8b4e758a0b0800000000000000
+      internalID: -5717223087083922936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc71e27627089a40800000000000000
+      internalID: 5375054016984218824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_11
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e830e53933cd4a00800000000000000
+      internalID: 742464164070439137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_12
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d555521413da575e0800000000000000
+      internalID: -1912432039690939043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_13
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1461decb5020c290800000000000000
+      internalID: -7872256569959685090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_14
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e9139a0d03db080800000000000000
+      internalID: -9170119593506529693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_15
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 311
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeac7df73c59dbeb0800000000000000
+      internalID: -4702437769008919826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 183
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e06ad138b51e95f80800000000000000
+      internalID: -8117209070200576498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_17
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 183
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a349852371452f400800000000000000
+      internalID: 356439779121337402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_18
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 183
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0b252030d9d6930800000000000000
+      internalID: 4138136268872790178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_19
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 183
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dae27129b093a420800000000000000
+      internalID: 2640112931373771479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_20
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 175
+        width: 130
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17131aedd2b52fb10800000000000000
+      internalID: 2013772235954794865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_21
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 175
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 389f99edd29f007f0800000000000000
+      internalID: -648244370937874045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_22
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 175
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157c12f1f71e5da80800000000000000
+      internalID: -8442593990336723119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_23
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 175
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f0f13e7edb3ff70800000000000000
+      internalID: 9219921665803095873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_24
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 47
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319da7943a3fc9fe0800000000000000
+      internalID: -1180801119639906029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_25
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 47
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55bf73a438f1fbf50800000000000000
+      internalID: 6899267802901248853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_26
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 47
+        width: 130
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dce994ea6787c1c0800000000000000
+      internalID: -4483466010852463401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_27
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 47
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9811fb5aefd385ea0800000000000000
+      internalID: -5883884749247802999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_28
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 39
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba10571e1c7a16d00800000000000000
+      internalID: 964236246387065259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_29
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 39
+        width: 130
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8acff9bc9825f90800000000000000
+      internalID: -6966354165933233921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_30
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 39
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bdec5c41a498f3f0800000000000000
+      internalID: -866779507777016397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocktileset_31
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 39
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9db040640ac1120800000000000000
+      internalID: 2385958125175560655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rocktileset_0: 629654483093268177
+      rocktileset_1: -2634430325167498645
+      rocktileset_10: 5375054016984218824
+      rocktileset_11: 742464164070439137
+      rocktileset_12: -1912432039690939043
+      rocktileset_13: -7872256569959685090
+      rocktileset_14: -9170119593506529693
+      rocktileset_15: -4702437769008919826
+      rocktileset_16: -8117209070200576498
+      rocktileset_17: 356439779121337402
+      rocktileset_18: 4138136268872790178
+      rocktileset_19: 2640112931373771479
+      rocktileset_2: -3144032757131800300
+      rocktileset_20: 2013772235954794865
+      rocktileset_21: -648244370937874045
+      rocktileset_22: -8442593990336723119
+      rocktileset_23: 9219921665803095873
+      rocktileset_24: -1180801119639906029
+      rocktileset_25: 6899267802901248853
+      rocktileset_26: -4483466010852463401
+      rocktileset_27: -5883884749247802999
+      rocktileset_28: 964236246387065259
+      rocktileset_29: -6966354165933233921
+      rocktileset_3: 1216410463464138623
+      rocktileset_30: -866779507777016397
+      rocktileset_31: 2385958125175560655
+      rocktileset_4: 8433848331941734647
+      rocktileset_5: -1333476231619169253
+      rocktileset_6: 2606319326599323276
+      rocktileset_7: -476031679131937525
+      rocktileset_8: 2558016576018905481
+      rocktileset_9: -5717223087083922936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
