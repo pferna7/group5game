@@ -15308,7 +15308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756f0db962b87974885850a36d276bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaturnDamageSound
-  damageSound: {fileID: 8300000, guid: 7d7c6576996513540b00075efd5ec6fb, type: 3}
+  damageSound: {fileID: 8300000, guid: 1ee4cd53592e08f4290ca936d1b76ef2, type: 3}
 --- !u!4 &2046982542
 Transform:
   m_ObjectHideFlags: 0
