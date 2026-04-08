@@ -20,6 +20,13 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI coinText;
 
+    [Header("Animation Names")]
+    public string idleAnimationName = "NaufIdle";
+    public string walkingAnimationName = "NaufWalking";
+    public string runAnimationName = "NaufRun";
+    public string jumpAnimationName = "NaufJump";
+    public string fallAnimationName = "NaufFall";
+
     [Header("Double Jump")]
     public bool enableDoubleJump = false; // permanent unlock if needed
     public float doubleJumpPowerupDuration = 7f;
@@ -135,20 +142,20 @@ public class Player : MonoBehaviour
         if (!isGrounded)
         {
             if (rb.linearVelocity.y > 0.1f)
-                ChangeAnimation("Jump");
+                ChangeAnimation(jumpAnimationName);
             else
-                ChangeAnimation("Fall");
+                ChangeAnimation(fallAnimationName);
             return;
         }
 
         float xSpeed = Mathf.Abs(rb.linearVelocity.x);
 
         if (xSpeed < 0.1f)
-            ChangeAnimation("Idle");
+            ChangeAnimation(idleAnimationName);
         else if (isRunning)
-            ChangeAnimation("Run");
+            ChangeAnimation(runAnimationName);
         else
-            ChangeAnimation("Walking");
+            ChangeAnimation(walkingAnimationName);
     }
 
     void ChangeAnimation(string animationName)
@@ -241,11 +248,11 @@ public class Player : MonoBehaviour
         StartCoroutine(BlinkRed());
         StartCoroutine(DamageCooldownRoutine());
 
-            if (health <= 0)
-            {
-                Die();
-            }
+        if (health <= 0)
+        {
+            Die();
         }
+    }
 
     IEnumerator DamageCooldownRoutine()
     {

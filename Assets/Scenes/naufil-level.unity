@@ -3104,7 +3104,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -2.2, z: -10}
+  m_LocalPosition: {x: -8.71, y: -1.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4073,7 +4073,7 @@ Transform:
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7838,7 +7838,7 @@ Transform:
   m_GameObject: {fileID: 1179920939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.342, z: 0}
+  m_LocalPosition: {x: -0.007, y: -3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9692,7 +9692,7 @@ Transform:
   m_GameObject: {fileID: 1535191877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -2.2, z: -10}
+  m_LocalPosition: {x: -8.71, y: -1.97, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11978,6 +11978,11 @@ MonoBehaviour:
     m_Bits: 64
   healthText: {fileID: 1401016467}
   coinText: {fileID: 1679775126}
+  idleAnimationName: NaufIdle
+  walkingAnimationName: NaufWalking
+  runAnimationName: NaufRun
+  jumpAnimationName: NaufJump
+  fallAnimationName: NaufFall
   enableDoubleJump: 0
   doubleJumpPowerupDuration: 7
   doubleJumpMessage: {fileID: 0}
@@ -12020,17 +12025,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.04691878, y: 0.00064870715}
+  m_Offset: {x: 0.1276071, y: -0.024299502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.73}
+    oldSize: {x: 3.23, y: 6.91}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3846677, y: 0.7377055}
+  m_Size: {x: 3.010137, y: 6.817588}
   m_EdgeRadius: 0
 --- !u!50 &1882095868
 Rigidbody2D:
@@ -12108,7 +12113,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1286625116262752288, guid: f71018a63dda9b647b1f1335076855b9, type: 3}
+  m_Sprite: {fileID: -4180797580395453689, guid: 2fb88c3e116b8ce48bf44d99225bc53b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12127,8 +12132,8 @@ Transform:
   m_GameObject: {fileID: 1882095864}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -2.2, z: 0}
-  m_LocalScale: {x: 2.5302682, y: 2.2777693, z: 1}
+  m_LocalPosition: {x: -8.71, y: -1.97, z: 0}
+  m_LocalScale: {x: 0.35, y: 0.3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1179920940}
