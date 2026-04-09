@@ -855,6 +855,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold)
@@ -862,8 +866,129 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 514985387}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+--- !u!1 &127961213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127961214}
+  - component: {fileID: 127961217}
+  - component: {fileID: 127961216}
+  - component: {fileID: 127961215}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &127961214
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127961213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &127961215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127961213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &127961216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127961213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &127961217
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127961213}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!1 &165141730 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 1650892221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &165141736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165141730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &165610048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1359,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (7)
@@ -1241,7 +1370,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1328170340}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &221402154
 GameObject:
@@ -1741,7 +1873,7 @@ GameObject:
   - component: {fileID: 301678499}
   - component: {fileID: 301678498}
   m_Layer: 0
-  m_Name: Powerups_7
+  m_Name: SpeedBoost
   m_TagString: SpeedBoostPwrUP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2123,6 +2255,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1613605905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &335744470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 1887244839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &335744476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335744470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &346128369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,6 +2893,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &450028556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 977320808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &450028562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450028556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &461885943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +3047,23 @@ Transform:
   - {fileID: 655481423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &514985381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 114638054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &514985387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514985381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &518418805
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,10 +3287,11 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -2.2, z: -10}
+  m_LocalPosition: {x: -8.5829, y: -1.89, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 127961214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
@@ -3314,6 +3498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (8)
@@ -3321,7 +3509,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1242998991}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &558620747
 GameObject:
@@ -4073,7 +4264,7 @@ Transform:
   m_GameObject: {fileID: 619394800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4203,6 +4394,7 @@ GameObject:
   - component: {fileID: 634485091}
   - component: {fileID: 634485092}
   - component: {fileID: 634485093}
+  - component: {fileID: 634485094}
   m_Layer: 0
   m_Name: Powerups_5
   m_TagString: DoubleJumpPwrUP
@@ -4346,6 +4538,18 @@ PolygonCollider2D:
       - {x: 0.415, y: 0.32}
       - {x: 0.36499998, y: 0.35}
   m_UseDelaunayMesh: 1
+--- !u!114 &634485094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634485090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af458f9fd1e64e1cba2ae03184ec534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoubleJumpPickup
 --- !u!1 &634946017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,6 +6250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (4)
@@ -6053,8 +6261,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1312088584}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+--- !u!1 &738654261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 1150557140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &738654267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738654261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
+--- !u!1 &760552840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 810031244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &760552846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760552840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1001 &810031244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6103,6 +6348,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold)
@@ -6110,8 +6359,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 760552846}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+--- !u!1 &832265197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 1187728645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &832265203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832265197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &833614095
 GameObject:
   m_ObjectHideFlags: 0
@@ -6251,6 +6520,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (6)
@@ -6258,7 +6531,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1121266233}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &862878589
 GameObject:
@@ -7167,6 +7443,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (3)
@@ -7174,7 +7454,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 450028562}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &1007611587
 GameObject:
@@ -7331,6 +7614,23 @@ Transform:
   - {fileID: 1082498152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1038902499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 1274729652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1038902505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038902499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &1045534401
 GameObject:
   m_ObjectHideFlags: 0
@@ -7483,6 +7783,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1121266227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 858106520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1121266233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121266227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &1142832208
 GameObject:
   m_ObjectHideFlags: 0
@@ -7622,6 +7939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (1)
@@ -7629,7 +7950,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 738654267}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &1171737741
 GameObject:
@@ -7838,7 +8162,7 @@ Transform:
   m_GameObject: {fileID: 1179920939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.342, z: 0}
+  m_LocalPosition: {x: -0.007, y: -3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7983,6 +8307,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (2)
@@ -7990,8 +8318,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 832265203}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+--- !u!1 &1206504244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 1960777844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1206504250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206504244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &1212228277
 GameObject:
   m_ObjectHideFlags: 0
@@ -8376,6 +8724,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1242998985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 555322843}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1242998991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242998985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &1244809555
 GameObject:
   m_ObjectHideFlags: 0
@@ -8606,6 +8971,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold)
@@ -8613,7 +8982,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1038902505}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &1281554631
 GameObject:
@@ -8706,6 +9078,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1312088578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 735144689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312088584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312088578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
+--- !u!1 &1328170334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+  m_PrefabInstance: {fileID: 201448331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1328170340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328170334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a529798773d24da6815362e4dcd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilCoin
 --- !u!1 &1401016465
 GameObject:
   m_ObjectHideFlags: 0
@@ -9692,7 +10098,7 @@ Transform:
   m_GameObject: {fileID: 1535191877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -2.2, z: -10}
+  m_LocalPosition: {x: -8.5829, y: -1.89, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10679,6 +11085,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold)
@@ -10686,7 +11096,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 165141736}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &1658089988
 GameObject:
@@ -11924,6 +12337,7 @@ GameObject:
   - component: {fileID: 1882095867}
   - component: {fileID: 1882095866}
   - component: {fileID: 1882095865}
+  - component: {fileID: 1882095871}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11960,7 +12374,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882095864}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c37025c6214b4e04fb1a298a86024016, type: 3}
   m_Name: 
@@ -12020,17 +12434,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.04691878, y: 0.00064870715}
+  m_Offset: {x: 0.1276071, y: -0.024299502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.73}
+    oldSize: {x: 3.23, y: 6.91}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.3846677, y: 0.7377055}
+  m_Size: {x: 3.010137, y: 6.817588}
   m_EdgeRadius: 0
 --- !u!50 &1882095868
 Rigidbody2D:
@@ -12108,7 +12522,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1286625116262752288, guid: f71018a63dda9b647b1f1335076855b9, type: 3}
+  m_Sprite: {fileID: -4180797580395453689, guid: 2fb88c3e116b8ce48bf44d99225bc53b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12127,13 +12541,51 @@ Transform:
   m_GameObject: {fileID: 1882095864}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.22, y: -2.2, z: 0}
-  m_LocalScale: {x: 2.5302682, y: 2.2777693, z: 1}
+  m_LocalPosition: {x: -8.5829, y: -1.89, z: 0}
+  m_LocalScale: {x: 0.39230087, y: 0.31575188, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1179920940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1882095871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882095864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229fc48e4e4f16d4eacd16c3f79c23f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaufilPlayer
+  health: 100
+  coins: 0
+  walkSpeed: 3
+  runSpeed: 6
+  jumpForce: 10
+  bouncePadMultiplier: 2
+  groundCheck: {fileID: 1179920940}
+  groundCheckRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  healthText: {fileID: 0}
+  coinText: {fileID: 0}
+  idleAnimationName: NaufIdle
+  walkingAnimationName: NaufWalking
+  runAnimationName: NaufRun
+  jumpAnimationName: NaufJump
+  fallAnimationName: NaufFall
+  enableDoubleJump: 0
+  doubleJumpPowerupDuration: 7
+  doubleJumpMessage: {fileID: 0}
+  speedBoost: 0
+  speedBoostMultiplier: 2
+  speedBoostDuration: 5
+  damageAmount: 25
+  damageCooldown: 0.5
 --- !u!1001 &1887244839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12182,6 +12634,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold) (5)
@@ -12189,7 +12645,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 335744476}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1001 &1890468484
 PrefabInstance:
@@ -14102,26 +14561,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -4, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -2, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -14147,26 +14586,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 3
       m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 1, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 2, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14952,16 +15371,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -11, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 41, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -15187,26 +15596,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 2
       m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -11, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -10, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -17060,10 +17449,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 5f79b21911bff564387b4130d661189c, type: 2}
   - m_RefCount: 283
     m_Data: {fileID: 11400000, guid: 9cbd62ea363e51f46959b911c07d1258, type: 2}
-  - m_RefCount: 156
+  - m_RefCount: 153
     m_Data: {fileID: 11400000, guid: c60d8b3964be9174e88bfc8e4cffd9a5, type: 2}
-  - m_RefCount: 4
-    m_Data: {fileID: 11400000, guid: f12f44eaba50c1547a896dbb1b35d560, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 626579260d870e046a06c441cebae23c, type: 2}
   - m_RefCount: 1
@@ -17085,10 +17474,10 @@ Tilemap:
     m_Data: {fileID: -959556669, guid: 1ff621bafaff38f4ebcc1baf669ab883, type: 3}
   - m_RefCount: 283
     m_Data: {fileID: 305698219, guid: 1ff621bafaff38f4ebcc1baf669ab883, type: 3}
-  - m_RefCount: 156
+  - m_RefCount: 153
     m_Data: {fileID: -1560912911, guid: 1ff621bafaff38f4ebcc1baf669ab883, type: 3}
-  - m_RefCount: 4
-    m_Data: {fileID: 1864582402, guid: 1ff621bafaff38f4ebcc1baf669ab883, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -250954055, guid: 1ff621bafaff38f4ebcc1baf669ab883, type: 3}
   - m_RefCount: 1
@@ -17104,7 +17493,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -462711227, guid: 1ff621bafaff38f4ebcc1baf669ab883, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 461
+  - m_RefCount: 454
     m_Data:
       e00: 1
       e01: 0
@@ -17123,7 +17512,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 461
+  - m_RefCount: 454
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -17358,6 +17747,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2609211019252257946, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
       propertyPath: m_Name
       value: Coin (Gold)
@@ -17365,7 +17758,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4546166825746264443, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1206504250}
   m_SourcePrefab: {fileID: 100100000, guid: 3eda789b61cf0fa4282e6bbc6bea8064, type: 3}
 --- !u!1 &1968692070
 GameObject:

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 
-public class Player : MonoBehaviour
+public class NaufilPlayer : MonoBehaviour
 {
     public int health = 100;
     public int coins = 0;
@@ -20,8 +20,15 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI coinText;
 
+    [Header("Animation Names")]
+    public string idleAnimationName = "NaufIdle";
+    public string walkingAnimationName = "NaufWalking";
+    public string runAnimationName = "NaufRun";
+    public string jumpAnimationName = "NaufJump";
+    public string fallAnimationName = "NaufFall";
+
     [Header("Double Jump")]
-    public bool enableDoubleJump = false;
+    public bool enableDoubleJump = false; // permanent unlock if needed
     public float doubleJumpPowerupDuration = 7f;
     public ShowDoubleJumpMessage doubleJumpMessage;
 
@@ -47,34 +54,11 @@ public class Player : MonoBehaviour
     private bool canTakeDamage = true;
     private bool doubleJumpPowerupActive = false;
 
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-
-        if (rb == null)
-            rb = GetComponentInChildren<Rigidbody2D>();
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
-
-        if (spriteRenderer == null)
-            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-
-        animator = GetComponent<Animator>();
-
-        if (animator == null)
-            animator = GetComponentInChildren<Animator>();
-    }
-
     void Start()
     {
-        if (rb == null)
-            Debug.LogError("Player.cs: Rigidbody2D not found on Player or its children.");
-
-        if (spriteRenderer == null)
-            Debug.LogWarning("Player.cs: SpriteRenderer not found on Player or its children.");
-
-        if (animator == null)
-            Debug.LogWarning("Player.cs: Animator not found on Player or its children.");
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
 
         UpdateHealthText();
         UpdateCoinText();
@@ -106,13 +90,10 @@ public class Player : MonoBehaviour
         UpdateHealthText();
         UpdateCoinText();
 
-        if (spriteRenderer != null)
-        {
-            if (moveInput > 0)
-                spriteRenderer.flipX = false;
-            else if (moveInput < 0)
-                spriteRenderer.flipX = true;
-        }
+        if (moveInput > 0)
+            spriteRenderer.flipX = false;
+        else if (moveInput < 0)
+            spriteRenderer.flipX = true;
 
         SetAnimation();
     }
@@ -120,8 +101,6 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         CheckGrounded();
-
-        if (rb == null) return;
 
         float currentSpeed = isRunning ? runSpeed : walkSpeed;
 
@@ -138,7 +117,6 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        if (rb == null) return;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
@@ -159,25 +137,25 @@ public class Player : MonoBehaviour
 
     void SetAnimation()
     {
-        if (animator == null || rb == null) return;
+        if (animator == null) return;
 
         if (!isGrounded)
         {
             if (rb.linearVelocity.y > 0.1f)
-                ChangeAnimation("Jump");
+                ChangeAnimation(jumpAnimationName);
             else
-                ChangeAnimation("Fall");
+                ChangeAnimation(fallAnimationName);
             return;
         }
 
         float xSpeed = Mathf.Abs(rb.linearVelocity.x);
 
         if (xSpeed < 0.1f)
-            ChangeAnimation("Idle");
+            ChangeAnimation(idleAnimationName);
         else if (isRunning)
-            ChangeAnimation("Run");
+            ChangeAnimation(runAnimationName);
         else
-            ChangeAnimation("Walking");
+            ChangeAnimation(walkingAnimationName);
     }
 
     void ChangeAnimation(string animationName)
@@ -257,7 +235,6 @@ public class Player : MonoBehaviour
 
     void Bounce()
     {
-        if (rb == null) return;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * bouncePadMultiplier);
     }
 
@@ -266,22 +243,9 @@ public class Player : MonoBehaviour
         health -= damageAmount;
         health = Mathf.Max(0, health);
 
-        UpdateHealthText();
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
-        if (rb != null)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
-        else
-        {
-            Debug.LogError("Player.cs: rb is null in TakeDamage(). Add Rigidbody2D to Player or same object as script.");
-        }
-
-        if (spriteRenderer != null)
-        {
-            StartCoroutine(BlinkRed());
-        }
-
+        StartCoroutine(BlinkRed());
         StartCoroutine(DamageCooldownRoutine());
 
         if (health <= 0)
